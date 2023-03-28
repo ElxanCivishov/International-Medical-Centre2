@@ -1,14 +1,14 @@
 /* # About */
 .about .icon-boxes h4 {
   font-size: 18px;
-  color: #4b7dab;
+  color: var(--primary-color);
   margin-bottom: 15px;
 }
 
 .about .icon-boxes h3 {
   font-size: 28px;
   font-weight: 700;
-  color: #2c4964;
+  color: var(--primary-color);
   margin-bottom: 15px;
 }
 
@@ -23,19 +23,19 @@
   justify-content: center;
   width: 64px;
   height: 64px;
-  border: 2px solid #8dc2f1;
+  border: 2px solid var(--primary-color);
   border-radius: 50px;
   transition: 0.5s;
 }
 
 .about .icon-box .icon i {
-  color: #1977cc;
+  color: var(--primary-color);
   font-size: 32px;
 }
 
 .about .icon-box:hover .icon {
-  background: #1977cc;
-  border-color: #1977cc;
+  background: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .about .icon-box:hover .icon i {
@@ -55,7 +55,7 @@
 }
 
 .about .icon-box .title a:hover {
-  color: #1977cc;
+  color: var(--primary-color);
 }
 
 .about .icon-box .description {
@@ -73,7 +73,7 @@
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#1977cc 50%, rgba(25, 119, 204, 0.4) 52%);
+  background: radial-gradient(#ac36e2 50%, rgba(127, 71, 201, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -109,14 +109,14 @@
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(25, 119, 204, 0.7);
+  border: 5px solid rgba(155, 52, 196, 0.7);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
 }
 
 .about .play-btn:hover::after {
-  border-left: 15px solid #1977cc;
+  border-left: 15px solid #a21fca;
   transform: scale(20);
 }
 
@@ -169,7 +169,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 20px;
-  background: #1977cc;
+  background: var(--primary-color);
   color: #fff;
   border-radius: 50px;
   display: inline-flex;
@@ -189,7 +189,6 @@
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
   font-size: 14px;
 }
 
@@ -242,7 +241,7 @@
 }
 
 .imc-fields .imc-content:hover::before {
-  background: #3fbbc0;
+  background: var(--primary-color);
   top: 0;
 }
 
@@ -257,8 +256,12 @@
 
 .imc-fields .icon-box i {
   font-size: 40px;
-  color: #1977cc;
+  color: var(--primary-color);
   margin-bottom: 30px;
+}
+
+.imc-fields .imc-content:hover i {
+  color: white;
 }
 
 .imc-fields .imc-content h4 {

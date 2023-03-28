@@ -1,6 +1,4 @@
-/*--------------------------------------------------------------
-# Top Bar
---------------------------------------------------------------*/
+@import "./global.css";
 #topbar {
   background: #fff;
   height: 40px;
@@ -15,16 +13,16 @@
 
 #topbar .contact-info a {
   line-height: 1;
-  color: #444444;
+  color: var(--text-color);
   transition: 0.3s;
 }
 
 #topbar .contact-info a:hover {
-  color: #1977cc;
+  color: var(--primary-color-hover);
 }
 
 #topbar .contact-info i {
-  color: #1977cc;
+  color: var(--primary-color);
   padding-right: 4px;
   margin-left: 15px;
   line-height: 0;
@@ -35,7 +33,7 @@
 }
 
 #topbar .social-links a {
-  color: #437099;
+  color: var(--primary-color);
   padding-left: 15px;
   display: inline-block;
   line-height: 1px;
@@ -43,7 +41,7 @@
 }
 
 #topbar .social-links a:hover {
-  color: #1977cc;
+  color: var(--primary-color-hover);
 }
 
 #topbar .social-links a:first-child {
@@ -51,19 +49,20 @@
 }
 
 @media (max-width: 768px) {
-  #top-link,
-  .top-tel {
-    display: none;
+  #topbar .contact-info {
+    width: 100%;
   }
 
-  .contact-info {
-    justify-content: space-between;
+  #topbar .social-links {
+    display: none !important;
+  }
+
+  #topbar #top-link {
+    display: none;
   }
 }
 
-/*--------------------------------------------------------------
-  # Header
-  --------------------------------------------------------------*/
+/* header */
 #header {
   background: #fff;
   transition: all 0.5s;
@@ -85,10 +84,6 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   font-family: "Poppins", sans-serif;
-}
-
-#header .logo a {
-  color: #2c4964;
 }
 
 #header .logo img {
@@ -126,7 +121,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 14px;
-  color: #2c4964;
+  color: var(--text-color);
   white-space: nowrap;
   transition: 0.3s;
   border-bottom: 2px solid #fff;
@@ -144,8 +139,8 @@
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: #1977cc;
-  border-color: #1977cc;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .navbar .dropdown:hover ul {
@@ -178,7 +173,7 @@
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #082744;
+  color: var(--text-color);
   border: none;
 }
 
@@ -201,7 +196,7 @@
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a {
-  color: black;
+  color: var(--primary-color);
 }
 
 .navbar .dropdown:hover > ul {
@@ -237,7 +232,7 @@
   * Mobile Navigation 
   */
 .mobile-nav-toggle {
-  color: #2c4964;
+  color: var(--primary-color);
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -291,6 +286,10 @@
   transition: 0.3s;
 }
 
+.navbar-mobile ul::-webkit-scrollbar {
+  display: none;
+}
+
 .navbar-mobile > ul > li {
   padding: 0;
 }
@@ -299,14 +298,14 @@
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #2c4964;
+  color: var(--text-color);
   border: none;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
-  color: #1977cc;
+  color: var(--primary-color);
 }
 
 .navbar-mobile .getstarted,
@@ -341,7 +340,7 @@
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover > a {
-  color: #1977cc;
+  color: var(--primary-color);
 }
 
 .navbar-mobile .dropdown > .dropdown-active {

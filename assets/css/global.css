@@ -1,10 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800&display=swap");
+:root {
+  --primary-color: #764b9c;
+  --text-color: #444444;
+  --primary-color-hover: #730ea1;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
+a:hover {
+  color: var(--primary-color);
+}
 /* width */
 body::-webkit-scrollbar {
   width: 10px;
@@ -17,7 +28,7 @@ body::-webkit-scrollbar-track {
 
 /* Handle */
 body::-webkit-scrollbar-thumb {
-  background: #1977cc;
+  background: var(--primary-color);
 
   border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -28,31 +39,21 @@ body::-webkit-scrollbar-thumb {
 
 /* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
-  background: #09599e;
+  background-color: #5f288f;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
   color: #444444;
 }
 
 a {
-  color: #1977cc;
+  color: var(--text-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: #3291e6;
+  color: var(--primary-color);
   text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", sans-serif;
 }
 
 section {
@@ -75,7 +76,7 @@ section {
   margin-bottom: 10px;
   padding-bottom: 10px;
   position: relative;
-  color: #2c4964;
+  color: var(--primary-color);
 }
 
 .section-title h2::before {

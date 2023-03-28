@@ -57,6 +57,16 @@
 .doctor-container .info .experience .alt-list {
   list-style: none;
   margin-top: 10px;
+  padding-left: 40px;
+}
+
+.doctor-container .info .experience ul li ul {
+  padding-left: 0;
+}
+
+.doctor-container .info .experience ul li ul li {
+  list-style: none;
+  margin-top: 10px;
 }
 
 .doctor-container .info .doctor-contact {

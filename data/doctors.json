@@ -3,12 +3,13 @@
     {
       "id": 1,
       "name": "İLKANƏ",
+      "imgUrl": "assets/img/doctors/doc-1.jpg",
       "surname": "MƏHYƏDDİNOVA",
       "position": "Həkim-laborant",
       "degree": "Dərəcəsiz",
       "graduat": [
-        "Təfəkkür Universiteti",
-        "Tibbi biologiya İnternatura - Laboratoriya işi",
+        " Təfəkkür Universiteti",
+        " Tibbi biologiya İnternatura - Laboratoriya işi",
         " Sumqayıt Şəhər Uşaq Xəstəxanası"
       ],
 
@@ -29,6 +30,7 @@
       "id": 2,
       "name": "SAMİRƏ ",
       "surname": "ƏLİYEVA",
+      "imgUrl": "assets/img/doctors/doc-2.jpg",
       "position": "Həkim-anestezioloq-reanimatoloq",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -45,7 +47,7 @@
           "department": "Cərrahiyyə şöbəsi"
         },
         {
-          "place": "'İNTERNATİONAL' MEDİCAL CENTRE' MMC",
+          "place": "'İNTERNATİONAL MEDİCAL CENTRE' MMC",
           "position": "Həkim-anestezioloq-reanimatoloq",
           "department": "Cərrahiyyə və Mama Gionekologiya şöbəsi"
         }
@@ -55,6 +57,7 @@
       "id": 3,
       "name": "CƏLALƏ",
       "surname": "ƏSGƏRLİ",
+      "imgUrl": "assets/img/doctors/doc-3.jpg",
       "position": "Cərrah Mama Ginekoloq",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -81,13 +84,14 @@
       "id": 4,
       "name": "İLQAR",
       "surname": "AĞAMƏLİYEV",
+      "imgUrl": "assets/img/doctors/doc-4.jpg",
       "position": "Həkim-nevropatoloq",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Tibb Universiteti"],
 
       "work_experience": [
         {
-          "place": "Respublika Klinik Xəstəxana",
+          "place": "Respublika Klinik Xəstəxanası",
           "position": "Həkim-nevropatoloq",
           "department": ""
         },
@@ -122,6 +126,7 @@
       "id": 5,
       "name": "ƏHMƏD",
       "surname": "ƏHMƏDOV",
+      "imgUrl": "assets/img/doctors/doc-5.jpg",
       "position": "Həkim-kardioloq",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -148,6 +153,7 @@
       "id": 6,
       "name": "TƏRLAN",
       "surname": "HƏSƏNOVA",
+      "imgUrl": "assets/img/doctors/doc-6.jpg",
       "position": "Cərrah Mama Ginekoloq",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -184,6 +190,7 @@
       "id": 7,
       "name": "NURANƏ",
       "surname": "MƏLİKZADƏ",
+      "imgUrl": "assets/img/doctors/doc-7.jpg",
       "position": "Şüa diaqnostikası üzrə həkim",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -204,6 +211,7 @@
       "id": 8,
       "name": "LEYLA",
       "surname": "QULİYEVA",
+      "imgUrl": "assets/img/doctors/doc-8.jpg",
       "position": "Həkim-pediatr",
       "degree": "UZMAN",
       "graduat": [
@@ -229,6 +237,7 @@
       "id": 9,
       "name": "YAYLAQ",
       "surname": "ŞAHVERDİYEVA",
+      "imgUrl": "assets/img/doctors/doc-9.jpg",
       "position": "Cərrah Mama Ginekoloq",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Beynəlxalq Universiteti"],
@@ -249,6 +258,7 @@
       "id": 10,
       "name": "ƏMİRASLAN",
       "surname": "ƏMİRASLANOV",
+      "imgUrl": "assets/img/doctors/doc-10.jpg",
       "position": "Estetik cərrah",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Beynəlxalq Universiteti"],
@@ -274,6 +284,7 @@
       "id": 11,
       "name": "AFƏT",
       "surname": "TAĞIYEVA",
+      "imgUrl": "assets/img/doctors/doc-11.jpg",
       "position": "Cərrah Mama Ginekoloq",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Beynəlxalq Universiteti"],
@@ -299,6 +310,7 @@
       "id": 12,
       "name": "ELVİRA",
       "surname": "MİRZƏYEVA",
+      "imgUrl": "assets/img/doctors/doc-12.jpg",
       "position": "Həkim terapevt, Ailə həkimi , ANTİ-AGE üzrə həkim",
       "degree": "Dərəcəsiz",
       "graduat": ["Nəriman Nərimanov adına Azərbaycan Dövlət Tibb İnstitutu"],
@@ -324,6 +336,7 @@
       "id": 13,
       "name": "RƏŞAD",
       "surname": "NURİYEV",
+      "imgUrl": "assets/img/doctors/doc-2.jpg",
       "position": "Həkim-anestezioloq-reanimatoloq",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -349,6 +362,7 @@
       "id": 14,
       "name": "AZƏR",
       "surname": "QAFAROV",
+      "imgUrl": "assets/img/doctors/doc-14.jpg",
       "position": "Həkim travmatoloq - ortoped",
       "degree": "Tibb ürzə Fəlsəfə doktoru",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -389,6 +403,7 @@
       "id": 15,
       "name": "ÜLVİYYƏ",
       "surname": "QÜDRƏTOVA",
+      "imgUrl": "assets/img/doctors/doc-15.jpg",
       "position": "Cərrah Mama Ginekoloq",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -424,6 +439,7 @@
       "id": 16,
       "name": "ŞƏFƏQ",
       "surname": "ƏKBƏROVA",
+      "imgUrl": "assets/img/doctors/doc-16.jpg",
       "position": "Cərrah Mama Ginekoloq",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -444,6 +460,7 @@
       "id": 17,
       "name": "AYNURƏ",
       "surname": "ABDULLAYEVA",
+      "imgUrl": "assets/img/doctors/doc-17.jpg",
       "position": "Şüa diaqnostikası üzrə həkim",
       "degree": "Dərəcəsiz",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -474,6 +491,7 @@
       "id": 18,
       "name": "SEVİNC",
       "surname": "QARAYEVA",
+      "imgUrl": "assets/img/doctors/doc-18.jpg",
       "position": "Həkim mama-ginekoloq",
       "degree": "Tibb elmləri namizədi",
       "graduat": ["Azərbaycan Tibb Universiteti"],
@@ -484,11 +502,6 @@
           "department": "Süni mayalandırma şöbəsi"
         },
         {
-          "place": "'İNTERNATİONAL MEDİCAL CENTRE' MMC",
-          "position": "Həkim mama-ginekoloq",
-          "department": "Doğum şöbəsi"
-        },
-        {
           "place": "Azərbaycan Tibb Universiteti",
           "position": "Şöbə müdiri",
           "department": "Eksperimental cərrahi şöbə"
@@ -497,6 +510,11 @@
           "place": "'MEDİLUKS-1' MMC (MEDİLUKS TİBB MƏRKƏZİ)",
           "position": "Həkim mama-ginekoloq",
           "department": "Ginekologiya şöbəsi"
+        },
+        {
+          "place": "'İNTERNATİONAL MEDİCAL CENTRE' MMC",
+          "position": "Həkim mama-ginekoloq",
+          "department": "Doğum şöbəsi"
         }
       ]
     }

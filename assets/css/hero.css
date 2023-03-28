@@ -16,7 +16,7 @@
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #2c4964;
+  color: var(--primary-color);
 }
 
 #hero h2 {
@@ -63,7 +63,7 @@
 
 .why-us .content {
   padding: 30px;
-  background: #1977cc;
+  background: var(--primary-color);
   border-radius: 4px;
   color: white;
 }
@@ -76,7 +76,7 @@
   -o-transition: all 0.5s ease;
 }
 .why-us .row .hero-content:hover {
-  background: #1977cc;
+  background: var(--primary-color);
 }
 
 .why-us .row .hero-content:hover i,
@@ -87,7 +87,7 @@
 
 .why-us .content h3 {
   font-weight: 700;
-  font-size: 34px;
+  font-size: 30px;
   margin-bottom: 30px;
 }
 
@@ -106,7 +106,7 @@
 
 .why-us .icon-boxes .icon-box i {
   font-size: 40px;
-  color: #1977cc;
+  color: var(--primary-color);
   margin-bottom: 30px;
 }
 

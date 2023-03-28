@@ -32,15 +32,18 @@
 </head>
 
 <body>
-  <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:teymur.a@sarainvest.az">teymur.a@sarainvest.az </a> <a
-          id="top-link" href="www.sarainvest.az"> <span class="me-1 ms-1"> | </span> www.sarainvest.az</a>
-        <i class="bi bi-phone"></i> +99412 510 88 48 (699) <span class="top-tel me-1 ms-1"> | +994 552397951</span>
+      <div style="justify-content: space-between !important;" class="contact-info d-flex align-items-center justify-content-between">
+        <div>
+          <i class="bi bi-envelope"></i> <a href="mailto:teymur.a@sarainvest.az">info@imc2.az</a>
+          <a id="top-link" href="https://www.imc2.az"> <span class="me-1 ms-1"> | </span>www.imc2.az</a>
+        </div>
+        <div class="ms-2 mobile-tab-info">
+          <i class="bi bi-phone"></i> <a href="tel:+994 70 266 55 74"> +994 70 266 55 74 </a>
+        </div>
       </div>
-      <div class="d-none d-lg-flex social-links align-items-center">
+      <div class="d-flex social-links align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -89,7 +92,7 @@
             </ul>
           </li>
 
-          <li><a class="nav-link scrollto" href="doctors.html#test">Həkimlər</a></li>
+          <li><a class="nav-link scrollto" href="doctors.html">Həkimlər</a></li>
           <li><a class="nav-link scrollto" href="gallery.html">Qalereya</a></li>
           <li><a class="nav-link scrollto" href="contact.html">Əlaqə</a></li>
         </ul>
@@ -164,11 +167,9 @@
           <div class="footer-contact">
             <h4>İnternational medical centre 2</h4>
             <p>
-              Ə.Qayıbov, 1222. <br>
-              Bakı, AZ1029, Azərbaycan<br>
-              <strong>Tel:</strong> +99412 510 88 48 (699)<br>
-              <strong>Mobil:</strong> +994 552397951<br>
-              <strong>Email:</strong> <a href="mailto:teymur.a@sarainvest.az">teymur.a@sarainvest.az</a><br>
+              <strong>Ünvan:</strong> Aşıq Molla Cümə, 11 B <br>
+              <strong>Mobil:</strong> <a href="tel:+994 70 266 55 74">+994 70 266 55 74</a><br>
+              <strong>Email:</strong> <a href="mailto:info@imc2.az">info@imc2.az</a><br>
             </p>
           </div>
           <div class="footer-links">
@@ -202,7 +203,7 @@
           &copy; Copyright <strong><span>İnternational Medical Centre 2 </span></strong>. Bütün Hüquqlar Qorunur
         </div>
         <div class="credits">
-          Sara İnvest Developerleri tərəfindən dizayn edilmişdir.
+          Sara İnvest Developerləri tərəfindən dizayn edilmişdir.
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
@@ -217,6 +218,11 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+<script type="module">
+  import {departments} from "./data/departments.js";
+  console.log(departments);
+</script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
