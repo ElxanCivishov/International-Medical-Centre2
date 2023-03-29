@@ -1,223 +1,89 @@
-/**
-* Template Name: Medilab
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-(function() {
+$(function () {
   "use strict";
+  let headerScrolled;
+  let toggleBacktotop;
 
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
+  // Toggle class .header-scrolled
+  if ($("#header")) {
+    headerScrolled = () => {
+      window.scrollY > 100
+        ? $("#header").addClass("header-scrolled")
+        : $("#header").removeClass("header-scrolled");
+      window.scrollY > 100 && $("#topbar")
+        ? $("#topbar").addClass("topbar-scrolled")
+        : $("#topbar").removeClass("topbar-scrolled");
+    };
   }
 
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
-    }
+  //  Back to top button
+  if ($(".back-to-top")) {
+    toggleBacktotop = () => {
+      window.scrollY > 100
+        ? $(this).addClass("active")
+        : $(this).removeClass("active");
+    };
   }
 
-  /**
-   * Easy on scroll event listener 
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
-
-  /**
-   * Navbar links active state on scroll
-   */
-  let navbarlinks = select('#navbar .scrollto', true)
-  const navbarlinksActive = () => {
-    let position = window.scrollY + 200
-    navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
-      } else {
-        navbarlink.classList.remove('active')
-      }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
-
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    let header = select('#header')
-    let offset = header.offsetHeight
-
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-      top: elementPos - offset,
-      behavior: 'smooth'
-    })
-  }
-
-  /**
-   * Toggle .header-scrolled class to #header when page is scrolled
-   */
-  let selectHeader = select('#header')
-  let selectTopbar = select('#topbar')
-  if (selectHeader) {
-    const headerScrolled = () => {
-      if (window.scrollY > 100) {
-        selectHeader.classList.add('header-scrolled')
-        if (selectTopbar) {
-          selectTopbar.classList.add('topbar-scrolled')
-        }
-      } else {
-        selectHeader.classList.remove('header-scrolled')
-        if (selectTopbar) {
-          selectTopbar.classList.remove('topbar-scrolled')
-        }
-      }
-    }
-    window.addEventListener('load', headerScrolled)
-    onscroll(document, headerScrolled)
-  }
-
-  /**
-   * Back to top button
-   */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
-
-  /**
-   * Mobile nav toggle
-   */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
-
-  /**
-   * Mobile nav dropdowns activate
-   */
-  on('click', '.navbar .dropdown > a', function(e) {
-    if (select('#navbar').classList.contains('navbar-mobile')) {
-      e.preventDefault()
-      this.nextElementSibling.classList.toggle('dropdown-active')
-    }
-  }, true)
-
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-
-      let navbar = select('#navbar')
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
-    }
-  }, true)
-
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
-    }
+  window.addEventListener("scroll", () => {
+    headerScrolled();
+    toggleBacktotop();
   });
 
-  /**
-   * Preloader
-   */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
-  }
+  //  Mobile nav toggle
+  $(".mobile-nav-toggle").click(() => {
+    $(".mobile-nav-toggle").toggleClass("bi-x").toggleClass("bi-list");
+    $("#navbar").toggleClass("navbar-mobile");
+  });
 
-  /**
-   * Initiate glightbox 
-   */
+  //  Mobile nav toggle
+  $(".navbar .dropdown > a").click((e) => {
+    $("#navbar").hasClass("navbar-mobile") &&
+      (e.preventDefault(),
+      $(".navbar .dropdown i").hasClass("bi-chevron-down")
+        ? $(".navbar .dropdown i")
+            .removeClass("bi-chevron-down")
+            .addClass("bi-chevron-up")
+        : $(".navbar .dropdown i")
+            .addClass("bi-chevron-down")
+            .removeClass("bi-chevron-up"),
+      $(".navbar .dropdown ul").toggleClass("dropdown-active"));
+  });
+
+  // Initiate glightbox
   const glightbox = GLightbox({
-    selector: '.glightbox'
+    selector: ".glightbox",
   });
 
-  /**
-   * Initiate Gallery Lightbox 
-   */
+  // Initiate Gallery Lightbox
   const galelryLightbox = GLightbox({
-    selector: '.galelry-lightbox'
+    selector: ".galelry-lightbox",
   });
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      }
-    }
+  // toggle link set localStorage for active nav
+  $(".nav-link").click((e) => {
+    const item = e.target.textContent;
+    localStorage.setItem("active-nav", item);
   });
 
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
+  // toggle logo set active class for nav links
+  const logoLink = document.getElementById("logo-link");
+  logoLink.addEventListener("click", () => {
+    localStorage.setItem("active-nav", "Haqqımızda");
+  });
 
-})()
+  // refresh active class for nav links, use localStorage data
+  const links = document.querySelectorAll(".nav-link");
+  links.forEach((element) => {
+    localStorage.getItem("active-nav") != element.textContent
+      ? element.classList.remove("active")
+      : element.classList.add("active");
+    localStorage.getItem("active-nav") == "Bölmələr"
+      ? ($(".dropdown > a").addClass("active"),
+        $(".dropdown a i").addClass("active"))
+      : $(".dropdown > a").removeClass("active");
+  });
+
+  $("#navbar .dropdown ul li").click((e) => {
+    localStorage.setItem("active-nav", "Bölmələr");
+  });
+});

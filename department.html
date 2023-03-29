@@ -12,6 +12,10 @@
   <!-- Favicons -->
   <link href="assets/img/si-logo.png" rel="icon">
 
+  <!-- Jquery cdn -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -34,7 +38,8 @@
 <body>
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
-      <div style="justify-content: space-between !important;" class="contact-info d-flex align-items-center justify-content-between">
+      <div style="justify-content: space-between !important;"
+        class="contact-info d-flex align-items-center justify-content-between">
         <div>
           <i class="bi bi-envelope"></i> <a href="mailto:teymur.a@sarainvest.az">info@imc2.az</a>
           <a id="top-link" href="https://www.imc2.az"> <span class="me-1 ms-1"> | </span>www.imc2.az</a>
@@ -56,7 +61,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/imc-logo.jpg" alt=""></a></h1>
+      <h1 class="logo me-auto"><a id="logo-link" href="index.html"><img src="assets/img/imc-logo.jpg" alt=""></a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="index.html">Haqqımızda</a></li>
@@ -68,7 +73,7 @@
                   <li><a href="department.html?Neonatologiya">Neonatologiya</a></li>
                   <li><a href="department.html?Ortopediya">Ortopediya</a></li>
                   <li><a href="department.html?Travmatologiya">Travmatologiya</a></li>
-                 </div>
+                </div>
                 <div class="col-12 col-md-3">
                   <li><a href="department.html?Nevrologiya">Nevrologiya</a></li>
                   <li><a href="department.html?Kardiologiya">Kardiologiya</a></li>
@@ -101,14 +106,14 @@
     </div>
   </header>
 
- <section id="departments" class="departments mt-5">
-      <div class="container">
+  <section id="departments" class="departments mt-5">
+    <div class="container">
 
-        <!-- <div class="section-title mt-5">
+      <!-- <div class="section-title mt-5">
           <h2>Labaratoriya</h2>
          </div> -->
 
-        <!-- <div class="row gy-4">
+      <!-- <div class="row gy-4">
           <div class="col-lg-3">
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item">
@@ -156,10 +161,10 @@
           </div>
         </div> -->
 
-      </div>
-    </section> 
+    </div>
+  </section>
   </main>
-  
+
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
@@ -215,20 +220,19 @@
     </div>
   </footer>
 
-  <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-<script type="module">
-    const departmentContainer=document.getElementById("departments");
-      var department = window.location.search.slice(1);
-  import {departments} from "./data/departments.js";
-  if (departments) {
-    const departmentDetail = departments.find(dep=>dep.title.includes(department));
-if (departmentDetail) {
-    const detailDiv=document.createElement("div");
-    detailDiv.classList.add("container");
-detailDiv.innerHTML=`
+  <script type="module">
+    const departmentContainer = document.getElementById("departments");
+    var department = window.location.search.slice(1);
+    import { departments } from "./data/departments.js";
+    if (departments) {
+      const departmentDetail = departments.find(dep => dep.title.includes(department));
+      if (departmentDetail) {
+        const detailDiv = document.createElement("div");
+        detailDiv.classList.add("container");
+        detailDiv.innerHTML = `
     <div class="section-title mt-5">
           <h2>${departmentDetail.title}</h2>
          </div>
@@ -236,14 +240,14 @@ detailDiv.innerHTML=`
          <div class="row gy-4">
           <div class="col-lg-3">
             <ul class="nav nav-tabs flex-column">
-                ${departmentDetail.totalİnformation!=""?`<li class="nav-item"><a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Ümumi məlumat</a></li>`:""}
-                ${departmentDetail.services!=""?`<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-2">Xidmətlər</a></li>`:""}
-                ${departmentDetail.TreatedDiseases!=""?`<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-3">Müalicə edilən xəstəliklər</a></li>`:""}
+                ${departmentDetail.totalİnformation != "" ? `<li class="nav-item"><a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Ümumi məlumat</a></li>` : ""}
+                ${departmentDetail.services != "" ? `<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-2">Xidmətlər</a></li>` : ""}
+                ${departmentDetail.TreatedDiseases != "" ? `<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-3">Müalicə edilən xəstəliklər</a></li>` : ""}
                 </ul>
           </div>
           <div class="col-lg-9">
             <div class="tab-content">
-                ${departmentDetail.totalİnformation!=""?`
+                ${departmentDetail.totalİnformation != "" ? `
                 <div class="tab-pane active show" id="tab-1">
                     <div class="row gy-4">
                     <div class="col-lg-8 details order-2 order-lg-1">
@@ -251,8 +255,8 @@ detailDiv.innerHTML=`
                     </div>
                     <div class="col-lg-4 text-center order-1 order-lg-2">
                         <img src=${departmentDetail.imgUrl} alt="" class="img-fluid">
-                    </div></div> </div>`:""}
-              <div class= ${departmentDetail.totalİnformation==""?"tab-pane active show":"tab-pane"} id="tab-2">
+                    </div></div> </div>`: ""}
+              <div class= ${departmentDetail.totalİnformation == "" ? "tab-pane active show" : "tab-pane"} id="tab-2">
                 <div class="row gy-4">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <ul>
@@ -277,14 +281,11 @@ detailDiv.innerHTML=`
             </div>
           </div>
         </div>
-
-
          `
-         departmentContainer.append(detailDiv);
-}
-
-  console.log(departmentDetail);}
-</script>
+        departmentContainer.append(detailDiv);
+      }
+    }
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

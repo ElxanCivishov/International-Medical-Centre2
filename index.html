@@ -12,7 +12,10 @@
   <!-- Favicons -->
   <link href="assets/img/si-logo.png" rel="icon">
 
-  <!-- Google Fonts -->
+<!-- Jquery cdn -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
@@ -51,15 +54,15 @@
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
     </div>
+    
   </div>
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/imc-logo.jpg" alt=""></a></h1>
+      <h1 class="logo me-auto"><a id="logo-link" href="index.html"><img src="assets/img/imc-logo.jpg" alt=""></a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Haqqımızda</a></li>
-          <li class="dropdown"><a href="#"><span>Bölmələr</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link active" href="index.html">Haqqımızda</a></li>
+          <li class="dropdown nav-link"><a  href=""><span>Bölmələr</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <div class="row ps-2 pe-2">
                 <div class="col-12 col-md-3">
@@ -91,9 +94,9 @@
             </ul>
           </li>
 
-          <li><a class="nav-link scrollto" href="doctors.html">Həkimlər</a></li>
-          <li><a class="nav-link scrollto" href="gallery.html">Qalereya</a></li>
-          <li><a class="nav-link scrollto" href="contact.html">Əlaqə</a></li>
+          <li><a class="nav-link " href="doctors.html">Həkimlər</a></li>
+          <li><a class="nav-link " href="gallery.html">Qalereya</a></li>
+          <li><a class="nav-link " href="contact.html">Əlaqə</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -292,8 +295,6 @@
     </section>
 
 
-    <!-- About imc2  İnternational medical Centre - 2 haqqında ümumi məlumat  -->
-
     <section class="imc-field">
       <div class="container">
         <div class="imc-fields">
@@ -408,7 +409,6 @@
     </div>
   </footer>
 
-  <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
@@ -420,8 +420,25 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
 
+ <script>
+    
+$(document).ready(function () {
+  // $(".nav-link").on("hover", function () {
+  //   console.log($(".nav-link"));
+  //   // e.preventDefault();
+  //   $("#navbar ul .nav-link").find(".active").removeClass("active");
+  //   $(this).addClass("active");
+  // });
+  $(".nav-link").click(function () {
+        $(".nav-link").removeClass("active");
+        $(this).addClass("active");
+    });
+});
 
+
+    </script>
   <script>
+    
     // const data = fetch("./data/doctors.json").then(res => res.text()).then(data => console.log(data));   
   </script>
   <script src="assets/js/main.js"></script>
