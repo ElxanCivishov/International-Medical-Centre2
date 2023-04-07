@@ -32,21 +32,7 @@ $(function () {
   //  Mobile nav toggle
   $(".mobile-nav-toggle").click(() => {
     $(".mobile-nav-toggle").toggleClass("bi-x").toggleClass("bi-list");
-    $("#navbar").toggleClass("navbar-mobile");
-  });
-
-  //  Mobile nav toggle
-  $(".navbar .dropdown > a").click((e) => {
-    $("#navbar").hasClass("navbar-mobile") &&
-      (e.preventDefault(),
-      $(".navbar .dropdown i").hasClass("bi-chevron-down")
-        ? $(".navbar .dropdown i")
-            .removeClass("bi-chevron-down")
-            .addClass("bi-chevron-up")
-        : $(".navbar .dropdown i")
-            .addClass("bi-chevron-down")
-            .removeClass("bi-chevron-up"),
-      $(".navbar .dropdown ul").toggleClass("dropdown-active"));
+    $("#navbar").toggleClass("active");
   });
 
   // Initiate glightbox
@@ -60,7 +46,7 @@ $(function () {
   });
 
   // toggle link set localStorage for active nav
-  $(".nav-link").click((e) => {
+  $(".nav-item").click((e) => {
     const item = e.target.textContent;
     localStorage.setItem("active-nav", item);
   });
@@ -72,18 +58,10 @@ $(function () {
   });
 
   // refresh active class for nav links, use localStorage data
-  const links = document.querySelectorAll(".nav-link");
+  const links = document.querySelectorAll(".nav-item");
   links.forEach((element) => {
     localStorage.getItem("active-nav") != element.textContent
       ? element.classList.remove("active")
       : element.classList.add("active");
-    localStorage.getItem("active-nav") == "Bölmələr"
-      ? ($(".dropdown > a").addClass("active"),
-        $(".dropdown a i").addClass("active"))
-      : $(".dropdown > a").removeClass("active");
-  });
-
-  $("#navbar .dropdown ul li").click((e) => {
-    localStorage.setItem("active-nav", "Bölmələr");
   });
 });
