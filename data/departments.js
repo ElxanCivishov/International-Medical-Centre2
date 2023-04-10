@@ -21,7 +21,7 @@ export const departments = [
     url: "nevrologiya",
     totalİnformation: "",
     services: [
-      "pilepsiyanın bütün formalarının  dəqiq diaqnostikası - EEQ  və yuxu EEQ-si  ilə aparılır",
+      "Pilepsiyanın bütün formalarının  dəqiq diaqnostikası - EEQ  və yuxu EEQ-si  ilə aparılır",
       "Klinikada yatan nevroloji xəstələrin  təqibi və müalicəsi",
       "Neyrofizioloji xidmət - Elektroensefaloqrafiya (EEQ, KT )",
       "Nevroloji ambulator xidmət",
