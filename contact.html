@@ -5,21 +5,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>International Medical Center MMC</title>
-  <meta content="" name="International Medical Center MMC">
-  <meta content="" name="International Medical Center MMC, Klinika, Medical Center">
+  <title>International Medical Centre 2</title>
+  <meta content="" name="International Medical Center MMC, International Medical Centre 2 Klinika, Medical Center, Medical center,">
 
   <!-- Favicons -->
   <link href="assets/img/imc-logo.png" rel="icon">
 
   <!-- Jquery cdn -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -32,6 +25,9 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
+
+
+
 </head>
 
 <body>
@@ -59,10 +55,10 @@
     <div class="container d-flex align-items-center">
       <h1 class="logo me-auto"><a id="logo-link" href="index.html"><img src="assets/img/imc-logo.png" alt=""></a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul> 
+        <ul>
           <!-- nav-item -->
           <li class="nav-item "><a class="nav-link active" href="index.html">Haqqımızda</a></li>
-       
+
           <li class="nav-item"><a class="nav-link" href="departments.html">Bölmələr</a></li>
           <li class="nav-item "><a class="nav-link " href="doctors.html">Həkimlər</a></li>
           <li class="nav-item"><a class="nav-link " href="gallery.html">Qalereya</a></li>
@@ -82,8 +78,8 @@
         </div>
         <div>
           <iframe style="border:0; width: 100%; height: 350px;"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.82112865247183!2d49.864726489936956!3d40.40276180983854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d45684be293%3A0xd227201b86cc903!2sInternational%202%20Medical%20Center!5e0!3m2!1sru!2saz!4v1679912782172!5m2!1sru!2saz"
-            frameborder="0" allowfullscreen></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d379.78393657578425!2d49.864832!3d40.402836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d45684be293%3A0xd227201b86cc903!2sInternational%202%20Medical%20Center!5e0!3m2!1saz!2saz!4v1681017427649!5m2!1saz!2saz"
+            frameborder="0" allowfulscreen></iframe>
         </div>
       </div>
 
@@ -111,39 +107,35 @@
 
           </div>
           <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="№№" method="post" role="form" class="php-email-form needs-validation"
-              novalidate>
+            <form id="contact-form" role="form" class="email-form" novalidate>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Adınız..." required>
-                  <div class="invalid-feedback">
-                    Bu alan məcburidir!
-                  </div>
+                  <input type="text" name="fulname" class="form-control" id="fulname"
+                    placeholder="Adınız və soyadınız..." required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email adresiniz..."
+                  <input type="text" class="form-control" name="email" id="email" placeholder="Email adresiniz..."
                     required>
-                  <div class="invalid-feedback">
-                    Bu alan məcburidir!
-                  </div>
                 </div>
               </div>
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Mövzu..." required>
-                <div class="invalid-feedback">
-                  Bu alan məcburidir!
-                </div>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" style="resize: none;" name="message" rows="4" placeholder="Mesajınız..."
-                  required></textarea>
-                <div class="invalid-feedback">
-                  Bu alan məcburidir!
+                <textarea class="form-control" id="message" style="resize: none;" name="message" rows="4"
+                  placeholder="Mesajınız..." required></textarea>
+              </div>
+              <div class="form-group mt-3">
+                <div id="invalid-messaje" class="form-control bg-danger" style="color:brown ;text-align: center; display: none;">
+                  Bütün xanalar doldurulmalıdır!
+                </div>
+                <div id="valid-messaje" class="form-control bg-success"
+                  style="color:rgb(3, 61, 6) ;text-align: center; display: none;">
+                  Messajınız göndərildi! Təşəkkürlər!
                 </div>
               </div>
               <div class="text-center"><button type="submit">Göndər</button></div>
             </form>
-
           </div>
 
         </div>
@@ -212,16 +204,117 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init('Y6tBQlKcgrL2gui2e');
+    })();
+
+
+
+    const invalidMessaje = document.getElementById("invalid-messaje");
+    const validMessaje = document.getElementById("valid-messaje");
+
+    const fulname = document.getElementById("fulname");
+    const email = document.getElementById("email");
+    const subject = document.getElementById("subject");
+    const message = document.getElementById("message");
+
+    let isValidEmail=false;
+
+    fulname.addEventListener("input", () => {
+      fulname.value == "" ? fulname.style.border = "1px solid red" : fulname.style.border = "1px solid rgb(21 129 52)";
+    })
+
+    email.addEventListener("input", (e) => {
+      let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (e.target.value.match(mailformat)) {
+        email.style.border = "1px solid rgb(21 129 52)";
+        isValidEmail=true;
+      }
+      else {
+        email.style.border = "1px solid red"
+        isValidEmail=false;
+      }
+    })
+
+    subject.addEventListener("input", () => {
+      subject.value == "" ? subject.style.border = "1px solid red" : subject.style.border = "1px solid rgb(21 129 52)";
+    })
+
+    message.addEventListener("input", () => {
+      message.value == "" ? message.style.border = "1px solid red" : message.style.border = "1px solid rgb(21 129 52)";
+    })
+
+    const invalidInputs = () => {
+      fulname.value == "" ? fulname.style.border = "1px solid red" : "";
+      email.value == "" ? email.style.border = "1px solid red" : "";
+      subject.value == "" ? subject.style.border = "1px solid red" : "";
+      message.value == "" ? message.style.border = "1px solid red" : "";
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (fulname.value == "" || !isValidEmail || subject.value == "" || message.value == "") {
+        invalidInputs();
+        invalidMessaje.style.display = "block";
+        setTimeout(() => {
+          invalidMessaje.style.display = "none";
+        }, 2000)
+      }
+      else {
+        invalidMessaje.style.display = "none";
+        const params = {
+          fulname: fulname.value,
+          email: email.value,
+          subject: subject.value,
+          message: message.value,
+        }
+
+        // these IDs from the previous steps
+        emailjs.send('service_el4xhzs', 'template_f73he38', params)
+          .then(function () {
+            validMessaje.style.display = "block";
+            clearFormInputs();
+            successfullyBorderFormInputs();
+            setTimeout(() => {
+              validMessaje.style.display = "none";
+            }, 3000)
+          }, function (error) {
+            invalidMessaje.style.display = "block";
+            invalidMessaje.textContent = "Təssüfki, əməliyyat uğursuz oldu! :(";
+            setTimeout(() => {
+              invalidMessaje.style.display = "none";
+            }, 2000)
+          });
+      }
+
+      clearFormInputs = () => {
+        fulname.value = "";
+        email.value = "";
+        subject.value = "";
+        message.value = "";
+      }
+
+      successfullyBorderFormInputs = () => {
+        fulname.style.border = "1px solid #ced4da";
+        email.style.border = "1px solid #ced4da";
+        subject.style.border = "1px solid #ced4da";
+        message.style.border = "1px solid #ced4da";
+      }
+    });
+  </script>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/validation.js"></script>
 </body>
 
 </html>

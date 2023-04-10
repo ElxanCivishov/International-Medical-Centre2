@@ -64,4 +64,9 @@ $(function () {
       ? element.classList.remove("active")
       : element.classList.add("active");
   });
+
+  /**
+   * Initiate Pure Counter
+   */
+  new PureCounter();
 });

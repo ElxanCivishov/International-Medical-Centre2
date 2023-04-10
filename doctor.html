@@ -15,11 +15,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -206,63 +201,6 @@
   
 
    </script>
-
-  <script>
-  
-
-    const data = fetch('/data/doctors.json')
-      .then(response => response.json())
-      .then(doctors => {
-        console.log(doctors.doctors);
-        // const doctorDetail = doctors.doctors.find(doctor=>doctor.id==doctorId);
-        // console.log(doctorDetail);
-        // const doctorElementDiv = document.createElement("div");
-        // doctorElementDiv.classList.add('doctor-container');
-        // doctorElementDiv.innerHTML = `
-        //             <div class="card">
-        //                <div class="profile">
-        //                 <img src=${doctorDetail.imgUrl} alt=${doctorDetail.name}>
-        //                 </div>
-        //                 <div class="title">
-        //                    <h4>Dr. ${doctorDetail.name} ${doctorDetail.surname}</h4>
-        //                    <p>${doctorDetail.position}</p>
-        //                </div>
-        //         </div>
-        //         <div class="info">
-        //             <div class="info-about">
-        //                 <h3>Dr. ${doctorDetail.name} ${doctorDetail.surname}</h3>
-        //                 <p> ${doctorDetail.graduat}</p>
-        //             </div>
-        //             <div class="experience"> 
-        //                 <h4>
-        //                     İş təcrübəsi                            
-        //                 </h4>
-        //               <ul>
-        //               ${doctorDetail.work_experience.map(item=> {
-        //                 if (item.place.includes("'")) {
-        //                   item.place=item.place.replaceAll(`'`,`"`);
-        //                 }
-        //                 if (item.department!="") {
-        //                   const data=[item.place,item.position,item.department];
-        //                   return "<li><ul><li>"+data[0] +"</li> <li>"+data[1] +"</li><li>"+data[2] +"</li></ul></li>"
-        //                 }
-        //                 else {
-        //                   const data=[item.place,item.position];
-        //                   return "<li><ul><li>"+data[0] +"</li><li>"+data[1] +"</li></ul></li>"
-        //                 }
-        //         }).join("")}
-        //                 </ul>
-        //             </div>
-                   
-        //         </div>
-
-        //     `
-        // doctorsContainer.append(doctorElementDiv);
-      });
-
-
-
-  </script>
 </body>
 
 </html>
