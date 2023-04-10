@@ -7,9 +7,9 @@ export const doctors = [
     position: "Həkim-laborant",
     degree: "Dərəcəsiz",
     graduat: [
-      " Təfəkkür Universiteti",
-      " Tibbi biologiya İnternatura - Laboratoriya işi",
-      " Sumqayıt Şəhər Uşaq Xəstəxanası",
+      "Təfəkkür Universiteti",
+      "Tibbi biologiya İnternatura - Laboratoriya işi",
+      "Sumqayıt Şəhər Uşaq Xəstəxanası",
     ],
 
     work_experience: [
@@ -24,6 +24,7 @@ export const doctors = [
         department: "",
       },
     ],
+    activity: [],
   },
   {
     id: 2,
@@ -42,6 +43,16 @@ export const doctors = [
           "Anesteziologiya-reanimatologiya və intensiv terapiya şöbəsi",
       },
       {
+        place: "Avrasiya Hospital",
+        position: "Reanimasiya şöbə müdiri",
+        department: "Cərrrahiyyə şöbəsi",
+      },
+      {
+        place: "Gəncə Beynəlxalq Xəstəxanası",
+        position: "Reanimasiya şöbə müdiri",
+        department: "Cərrahiyyə şöbəsi",
+      },
+      {
         place: "Mərkəzi Klinika",
         position: "Həkim-anestezioloq-reanimatoloq",
         department: "Cərrahiyyə şöbəsi",
@@ -51,6 +62,12 @@ export const doctors = [
         position: "Həkim-anestezioloq-reanimatoloq",
         department: "Cərrahiyyə və Mama Gionekologiya şöbəsi",
       },
+    ],
+    activity: [
+      "Venadaxili anesteziya",
+      "Umumi anesteziya",
+      "Regionar anesteziya (Spinal, Epidural, Periflik bloklar, Təbii doğuşun ağrısızlaşdırılması)",
+      "Mərkəzi venaların kateterizasiyası",
     ],
   },
   {
@@ -80,6 +97,7 @@ export const doctors = [
         department: "Həkim mama-ginekoloq",
       },
     ],
+    activity: [],
   },
   {
     id: 4,
@@ -122,6 +140,7 @@ export const doctors = [
         department: "",
       },
     ],
+    activity: [],
   },
   {
     id: 5,
@@ -149,6 +168,7 @@ export const doctors = [
         department: "Konsultativ poliklinika şöbəsi",
       },
     ],
+    activity: [],
   },
   {
     id: 6,
@@ -189,6 +209,7 @@ export const doctors = [
         department: "Konsultativ poliklinika şöbəsi",
       },
     ],
+    activity: [],
   },
   {
     id: 7,
@@ -211,6 +232,7 @@ export const doctors = [
         department: "Konsultativ poliklinika şöbəsi",
       },
     ],
+    activity: [],
   },
   {
     id: 8,
@@ -237,6 +259,7 @@ export const doctors = [
         department: "Neonatologiya şöbəsi",
       },
     ],
+    activity: [],
   },
   {
     id: 9,
@@ -245,10 +268,15 @@ export const doctors = [
     imgUrl: "assets/img/doctors/doc-9.jpg",
     position: "Cərrah Mama Ginekoloq",
     degree: "Dərəcəsiz",
-    graduat: ["Azərbaycan Beynəlxalq Universiteti"],
+    graduat: ["Azərbaycan Tibb Universiteti"],
     work_experience: [
       {
         place: "Diaqnoz Tibb Mərkəzi MMC",
+        position: "Həkim mama-ginekoloq",
+        department: "Ginekologiya şöbəsi",
+      },
+      {
+        place: "Nigar klinikası",
         position: "Həkim mama-ginekoloq",
         department: "Ginekologiya şöbəsi",
       },
@@ -257,6 +285,18 @@ export const doctors = [
         position: "Həkim mama-ginekoloq",
         department: "Konsultativ poliklinika şöbəsi",
       },
+    ],
+    activity: [
+      "Bütün növ ginekoloji əməliyyatlar",
+      "Ginekoloji xəstəlikərin müalicəsi",
+      "Sonsuzluğun müalicəsi",
+      "Hamiləliyin və riskli hamiləliyin təqibi",
+      "Təbii doğuş (ağrısız)",
+      "Keysəriyyə",
+      "Laporoskopik-histeroskopik əməliyyatlar",
+      "Kolposkopiya",
+      "Uşaqlıq eroziyasının lazerlə müalicəsi",
+      "Histerosalpinqoqrafiya (boruların yoxlanılması)",
     ],
   },
   {
@@ -284,6 +324,7 @@ export const doctors = [
         department: "",
       },
     ],
+    activity: [],
   },
   {
     id: 11,
@@ -310,6 +351,7 @@ export const doctors = [
         department: "",
       },
     ],
+    activity: [],
   },
   {
     id: 12,
@@ -336,6 +378,7 @@ export const doctors = [
         department: "Konsultativ poliklinika şöbəsi",
       },
     ],
+    activity: [],
   },
   {
     id: 13,
@@ -364,6 +407,7 @@ export const doctors = [
         department: "Cərrahiyyə şöbəsi",
       },
     ],
+    activity: [],
   },
   {
     id: 14,
@@ -407,6 +451,13 @@ export const doctors = [
         department: "",
       },
     ],
+    activity: [
+      "Travmatoloji-ortopedik əməliyyatlar, diz, bud çanaq və oynaqların endoprotezlənməsi,",
+      "Əl cərrahiyyəsi",
+      "İlizarov aparatı ilə ostoesintez",
+      "İdman travmaları",
+      "Şəkərli xəstələrdə irinli yaraların müalicəsi",
+    ],
   },
   {
     id: 15,
@@ -443,6 +494,7 @@ export const doctors = [
         department: "",
       },
     ],
+    activity: [],
   },
   {
     id: 16,
@@ -464,6 +516,7 @@ export const doctors = [
         department: "",
       },
     ],
+    activity: [],
   },
   {
     id: 17,
@@ -495,6 +548,7 @@ export const doctors = [
         department: "Şüa diaqnostikası şöbəsi",
       },
     ],
+    activity: [],
   },
   {
     id: 18,
@@ -526,5 +580,6 @@ export const doctors = [
         department: "Doğum şöbəsi",
       },
     ],
+    activity: [],
   },
 ];

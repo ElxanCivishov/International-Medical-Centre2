@@ -10,9 +10,9 @@
   <meta content="" name="International Medical Center MMC, Klinika, Medical Center">
 
   <!-- Favicons -->
-    <link href="assets/img/imc-logo.png" rel="icon">
+  <link href="assets/img/imc-logo.png" rel="icon">
   <!-- Jquery cdn -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 
   <!-- Vendor CSS Files -->
@@ -54,10 +54,10 @@
     <div class="container d-flex align-items-center">
       <h1 class="logo me-auto"><a id="logo-link" href="index.html"><img src="assets/img/imc-logo.png" alt=""></a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul> 
+        <ul>
           <!-- nav-item -->
           <li class="nav-item "><a class="nav-link active" href="index.html">Haqqımızda</a></li>
-          
+
           <li class="nav-item"><a class="nav-link" href="departments.html">Bölmələr</a></li>
           <li class="nav-item "><a class="nav-link " href="doctors.html">Həkimlər</a></li>
           <li class="nav-item"><a class="nav-link " href="gallery.html">Qalereya</a></li>
@@ -71,12 +71,10 @@
   <!-- ======= Doctors Section ======= -->
   <section id="doctor" class="doctor mt-5">
     <div class="container" id="doctor-detail">
-     <div class="doctor-container">
+      <div class="doctor-container">
 
-     </div>
+      </div>
 
-
-    </div>
   </section>
 
   </main>
@@ -152,18 +150,19 @@
   <script type="module">
     var doctorId = window.location.search.slice(1);
     const doctorsContainer = document.querySelector("#doctor-detail");
-   import  {doctors}  from "/data/doctors.js";
-   if (doctors) {
-    const doctorDetail = doctors.find(doctor=>doctor.id==doctorId);
-        const doctorElementDiv = document.createElement("div");
-        doctorElementDiv.classList.add('doctor-container');
-        doctorElementDiv.innerHTML = `
+    import { doctors } from "/data/doctors.js";
+    if (doctors) {
+      const doctorDetail = doctors.find(doctor => doctor.id == doctorId);
+      const doctorElementDiv = document.createElement("div");
+      doctorElementDiv.classList.add('doctor-container');
+      doctorElementDiv.innerHTML = `
                     <div class="card">
                        <div class="profile">
                         <img src=${doctorDetail.imgUrl} alt=${doctorDetail.name}>
                         </div>
                         <div class="title">
                            <h4>Dr. ${doctorDetail.name} ${doctorDetail.surname}</h4>
+                           <p>${doctorDetail.degree}</p>
                            <p>${doctorDetail.position}</p>
                        </div>
                 </div>
@@ -177,30 +176,38 @@
                             İş təcrübəsi                            
                         </h4>
                       <ul>
-                      ${doctorDetail.work_experience.map(item=> {
-                        if (item.place.includes("'")) {
-                          item.place=item.place.replaceAll(`'`,`"`);
-                        }
-                        if (item.department!="") {
-                          const data=[item.place,item.position,item.department];
-                          return "<li><ul><li>"+data[0] +"</li> <li>"+data[1] +"</li><li>"+data[2] +"</li></ul></li>"
-                        }
-                        else {
-                          const data=[item.place,item.position];
-                          return "<li><ul><li>"+data[0] +"</li><li>"+data[1] +"</li></ul></li>"
-                        }
-                }).join("")}
+                      ${doctorDetail.work_experience.map(item => {
+        if (item.place.includes("'")) {
+          item.place = item.place.replaceAll(`'`, `"`);
+        }
+        if (item.department != "") {
+          const data = [item.place, item.department, item.position];
+          return "<li><ul><li>" + data[0] + "</li> <li>" + data[1] + "</li><li>" + data[2] + "</li></ul></li> <hr>"
+        }
+        else {
+          const data = [item.place, item.position];
+          return "<li><ul><li>" + data[0] + "</li><li>" + data[1] + "</li></ul></li>"
+        }
+      }).join("")}
+                        </ul>                                          
+                        ${doctorDetail.activity.length > 0 ? "<h5>Fəaliyyət:</h5>" : ""}                       
+                        <ul>
+                      ${doctorDetail?.activity?.map(item => {
+
+        return "<li><ul><li>" + item + "</li></ul></li>"
+
+      }).join("")}
                         </ul>
                     </div>
                    
                 </div>
-
             `
-        doctorsContainer.append(doctorElementDiv);
-   }
-  
 
-   </script>
+      doctorsContainer.append(doctorElementDiv);
+    }
+
+
+  </script>
 </body>
 
 </html>
