@@ -19,8 +19,8 @@ $(function () {
   if ($(".back-to-top")) {
     toggleBacktotop = () => {
       window.scrollY > 100
-        ? ($(".back-to-top").addClass("active"), console.log("123"))
-        : ($(".back-to-top").removeClass("active"), console.log("1"));
+        ? $(".back-to-top").addClass("active")
+        : $(".back-to-top").removeClass("active");
     };
   }
 
