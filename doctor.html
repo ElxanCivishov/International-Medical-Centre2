@@ -156,13 +156,13 @@
       const doctorElementDiv = document.createElement("div");
       doctorElementDiv.classList.add('doctor-container');
       doctorElementDiv.innerHTML = `
-                    <div class="card">
+                    <div class="card" style="max-height:500px">
                        <div class="profile">
                         <img src=${doctorDetail.imgUrl} alt=${doctorDetail.name}>
                         </div>
                         <div class="title">
                            <h4>Dr. ${doctorDetail.name} ${doctorDetail.surname}</h4>
-                           <p>${doctorDetail.degree}</p>
+                          ${doctorDetail.degree!="Dərəcəsiz" ? `<p>${doctorDetail.degree}</p>`:""}
                            <p>${doctorDetail.position}</p>
                        </div>
                 </div>
