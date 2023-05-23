@@ -384,7 +384,7 @@ export const doctors = [
     id: 13,
     name: "RƏŞAD",
     surname: "NURİYEV",
-    imgUrl: "assets/img/doctors/notFoundUser.webp",
+    imgUrl: "assets/img/doctors/doc-13.jpeg",
     position: "Həkim-anestezioloq-reanimatoloq",
     degree: "Dərəcəsiz",
     graduat: ["Azərbaycan Tibb Universiteti"],
